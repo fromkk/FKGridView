@@ -19,6 +19,8 @@
 		AD9D55BD18C3317F007EE5F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9D55A518C3317F007EE5F7 /* UIKit.framework */; };
 		AD9D55C518C3317F007EE5F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD9D55C318C3317F007EE5F7 /* InfoPlist.strings */; };
 		AD9D55C718C3317F007EE5F7 /* fkGridViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9D55C618C3317F007EE5F7 /* fkGridViewTests.m */; };
+		AD9D55D418C331C9007EE5F7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9D55D318C331C9007EE5F7 /* RootViewController.m */; };
+		AD9D55D718C33200007EE5F7 /* FKGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9D55D618C331FF007EE5F7 /* FKGridView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		AD9D55C218C3317F007EE5F7 /* fkGridViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fkGridViewTests-Info.plist"; sourceTree = "<group>"; };
 		AD9D55C418C3317F007EE5F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD9D55C618C3317F007EE5F7 /* fkGridViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fkGridViewTests.m; sourceTree = "<group>"; };
+		AD9D55D218C331C9007EE5F7 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		AD9D55D318C331C9007EE5F7 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		AD9D55D518C331FF007EE5F7 /* FKGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKGridView.h; sourceTree = "<group>"; };
+		AD9D55D618C331FF007EE5F7 /* FKGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKGridView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		AD9D559518C3317F007EE5F7 = {
 			isa = PBXGroup;
 			children = (
+				AD9D55D118C331A7007EE5F7 /* View */,
+				AD9D55D018C3318A007EE5F7 /* ViewController */,
 				AD9D55A718C3317F007EE5F7 /* fkGridView */,
 				AD9D55C018C3317F007EE5F7 /* fkGridViewTests */,
 				AD9D55A018C3317F007EE5F7 /* Frameworks */,
@@ -142,6 +150,26 @@
 				AD9D55C318C3317F007EE5F7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD9D55D018C3318A007EE5F7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AD9D55D218C331C9007EE5F7 /* RootViewController.h */,
+				AD9D55D318C331C9007EE5F7 /* RootViewController.m */,
+			);
+			name = ViewController;
+			path = fkGridView/Classes/ViewController;
+			sourceTree = "<group>";
+		};
+		AD9D55D118C331A7007EE5F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD9D55D518C331FF007EE5F7 /* FKGridView.h */,
+				AD9D55D618C331FF007EE5F7 /* FKGridView.m */,
+			);
+			name = View;
+			path = fkGridView/Classes/View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9D55B218C3317F007EE5F7 /* AppDelegate.m in Sources */,
+				AD9D55D718C33200007EE5F7 /* FKGridView.m in Sources */,
 				AD9D55AE18C3317F007EE5F7 /* main.m in Sources */,
+				AD9D55D418C331C9007EE5F7 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
