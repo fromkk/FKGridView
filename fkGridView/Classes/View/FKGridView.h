@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong, readonly) NSMutableArray *itemViews;
 @property (nonatomic, assign) CGFloat padding;
+@property (nonatomic, assign) NSInteger cols;
+@property (nonatomic, assign) BOOL autoresizeWidth;
 
 - (void)addGridItemView:(UIView *)view;
 - (void)setGridItemViews:(NSArray *)views;

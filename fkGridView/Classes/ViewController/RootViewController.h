@@ -11,6 +11,6 @@
 
 @interface RootViewController : UIViewController
 
-@property (nonatomic, strong) fkGridView *gridView;
+@property (nonatomic, strong) FKGridView *gridView;
 
 @end
