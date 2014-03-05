@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AD9D559918C3317F007EE5F7 /* Build configuration list for PBXProject "fkGridView" */;
+			buildConfigurationList = AD9D559918C3317F007EE5F7 /* Build configuration list for PBXProject "FKGridView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -392,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fkGridView/fkGridView-Prefix.pch";
 				INFOPLIST_FILE = "fkGridView/fkGridView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -405,6 +406,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fkGridView/fkGridView-Prefix.pch";
 				INFOPLIST_FILE = "fkGridView/fkGridView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -455,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD9D559918C3317F007EE5F7 /* Build configuration list for PBXProject "fkGridView" */ = {
+		AD9D559918C3317F007EE5F7 /* Build configuration list for PBXProject "FKGridView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD9D55C818C3317F007EE5F7 /* Debug */,
@@ -471,6 +473,7 @@
 				AD9D55CC18C3317F007EE5F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD9D55CD18C3317F007EE5F7 /* Build configuration list for PBXNativeTarget "fkGridViewTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +482,7 @@
 				AD9D55CF18C3317F007EE5F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
