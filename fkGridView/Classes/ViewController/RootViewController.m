@@ -33,14 +33,15 @@
     [super loadView];
     
     self.gridView = [FKGridView new];
+    self.gridView.frame = self.view.bounds;
     self.gridView.cols = 3;
     self.gridView.autoresizeWidth = YES;
     [self.view addSubview:self.gridView];
     
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 102; i++) {
         UIView *currentView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, (320.0f - 5.0f * 4.0f) / 3.0f, rand() % 10 * 10.0f)];
         currentView.backgroundColor = [UIColor redColor];
-        [self.gridView addGridItemView:currentView];
+        [self.gridView addGridItemView:currentView animated:YES];
     }
 }
 

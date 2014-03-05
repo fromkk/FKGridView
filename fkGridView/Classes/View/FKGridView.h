@@ -16,6 +16,8 @@
 @property (nonatomic, assign) BOOL autoresizeWidth;
 
 - (void)addGridItemView:(UIView *)view;
+- (void)addGridItemView:(UIView *)view animated:(BOOL)animated;
 - (void)setGridItemViews:(NSArray *)views;
+- (void)setGridItemViews:(NSArray *)views animated:(BOOL)animated;
 
 @end
