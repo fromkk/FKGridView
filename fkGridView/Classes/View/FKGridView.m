@@ -13,7 +13,7 @@
 #define FKGridViewDefaultAutoresizeWidth NO
 
 @interface FKGridView () {
-    BOOL _animated;
+    BOOL _layouted;
     NSMutableDictionary *_heights;
     NSTimer *timer;
     NSInteger animatedCount;
@@ -29,6 +29,8 @@
 
 - (void)dealloc
 {
+    [self clearGridItems];
+    
     if ( [timer isValid]) {
         [timer invalidate];
     }
@@ -38,14 +40,6 @@
     _itemViews = nil;
     _heights = nil;
     stack = nil;
-    
-    for (int i = 0; i < _itemViews.count; i++) {
-        UIView *itemView = [_itemViews objectAtIndex:i];
-        [itemView removeFromSuperview];
-        itemView = nil;
-        
-        [_itemViews removeObjectAtIndex:i];
-    }
 }
 
 - (id)init {
@@ -70,16 +64,18 @@
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     
+    _layouted = YES;
     self.contentSize = frame.size;
 }
 
 - (void)initialize {
-    _animated            = NO;
-    _itemViews           = [[NSMutableArray alloc] init];
-    _heights             = [[NSMutableDictionary alloc] init];
     self.padding         = FKGridViewDefaultPadding;
     self.cols            = FKGridViewDefaultCols;
     self.autoresizeWidth = FKGridViewDefaultAutoresizeWidth;
+    
+    _layouted            = NO;
+    _itemViews           = [[NSMutableArray alloc] init];
+    _heights             = [[NSMutableDictionary alloc] init];
     timer                = nil;
     animatedCount        = 0;
     stack                = [[NSMutableArray alloc] init];
@@ -90,7 +86,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    if ( _animated ) {
+    if ( _layouted ) {
         int loopCount   = 0;
         int currentCol  = 0;
         int currentRow  = 0;
@@ -141,6 +137,8 @@
         }
         
         self.contentSize = CGSizeMake(self.frame.size.width, maxHeight + self.padding);
+        
+        _layouted = NO;
     }
 }
 
@@ -198,7 +196,7 @@
         view.frame = itemFrame;
         [self addSubview:view];
         
-        _animated = YES;
+        _layouted = YES;
         [self setNeedsLayout];
     }
 }
@@ -209,7 +207,7 @@
         [timer invalidate];
         timer = nil;
         
-        _animated = YES;
+        _layouted = YES;
         
         [self setNeedsLayout];
     } else {
@@ -225,6 +223,18 @@
         
         [stack removeObjectAtIndex:0];
     }
+}
+
+- (void)clearGridItems {
+    for (int i = 0; i < _itemViews.count; i++) {
+        UIView *itemView = [_itemViews objectAtIndex:i];
+        [itemView removeFromSuperview];
+        itemView = nil;
+        
+        [_itemViews removeObjectAtIndex:i];
+    }
+    
+    self.contentSize = self.frame.size;
 }
 
 /*
